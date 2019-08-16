@@ -1,7 +1,7 @@
 {
   "name": "react-colorful-avatar",
   "version": "0.0.1",
-  "description": "Condition Components for React",
+  "description": "Colorful Avatar for React",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,10 +14,9 @@
   },
   "keywords": [
     "React",
-    "Condition",
-    "If",
-    "Else",
-    "Switch"
+    "Avatar",
+    "Letter",
+    "Colorful"
   ],
   "author": "Aykut Kardaş",
   "license": "MIT",
