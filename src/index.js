@@ -60,10 +60,7 @@ const ReactLetterAvatar = ({
     justifyContent: "center",
     width: size,
     height: size,
-    borderRadius: circle ? size / 2 : radius
-  };
-
-  let textStyle = {
+    borderRadius: circle ? size / 2 : radius,
     fontSize: Math.floor(size / 2),
     color: "rgba(233,233,233,0.9)",
     alignItems: "center"
@@ -71,7 +68,7 @@ const ReactLetterAvatar = ({
 
   return (
     <div style={style}>
-      <div style={textStyle}>{firstLetter}</div>
+      {firstLetter}
     </div>
   );
 };

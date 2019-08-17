@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _defineProperty2 = require("babel-runtime/helpers/defineProperty");
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
@@ -67,30 +71,22 @@ var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
     bgColor = [0, 0, 0];
   }
 
-  var style = {
+  var style = (0, _defineProperty3.default)({
     display: "flex",
     backgroundColor: "rgb(" + bgColor + ")",
     alignItems: "center",
     justifyContent: "center",
     width: size,
     height: size,
-    borderRadius: circle ? size / 2 : radius
-  };
-
-  var textStyle = {
+    borderRadius: circle ? size / 2 : radius,
     fontSize: Math.floor(size / 2),
-    color: "rgba(233,233,233,0.9)",
-    alignItems: "center"
-  };
+    color: "rgba(233,233,233,0.9)"
+  }, "alignItems", "center");
 
   return _react2.default.createElement(
     "div",
     { style: style },
-    _react2.default.createElement(
-      "div",
-      { style: textStyle },
-      firstLetter
-    )
+    firstLetter
   );
 };
 
