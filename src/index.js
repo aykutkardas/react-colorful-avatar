@@ -36,14 +36,14 @@ const colors = {
 };
 
 const ReactLetterAvatar = ({
-  name = "X",
+  name,
   size = 100,
   radius = 0,
   circle,
   lang = "en-EN",
   style = {},
 }) => {
-  let firstLetter = name.trim()[0].toLocaleUpperCase(lang);
+  let firstLetter = (name || "X").trim()[0].toLocaleUpperCase(lang);
 
   let bgColor;
   if (/[A-Z]|Ö|Ç|Ğ|Ü|Ş|İ/.test(firstLetter)) {

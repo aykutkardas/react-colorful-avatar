@@ -54,8 +54,7 @@ var colors = {
 };
 
 var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
-  var _ref$name = _ref.name,
-      name = _ref$name === undefined ? "X" : _ref$name,
+  var name = _ref.name,
       _ref$size = _ref.size,
       size = _ref$size === undefined ? 100 : _ref$size,
       _ref$radius = _ref.radius,
@@ -66,7 +65,7 @@ var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
       _ref$style = _ref.style,
       style = _ref$style === undefined ? {} : _ref$style;
 
-  var firstLetter = name.trim()[0].toLocaleUpperCase(lang);
+  var firstLetter = (name || "X").trim()[0].toLocaleUpperCase(lang);
 
   var bgColor = void 0;
   if (/[A-Z]|Ö|Ç|Ğ|Ü|Ş|İ/.test(firstLetter)) {
