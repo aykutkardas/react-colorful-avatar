@@ -40,7 +40,8 @@ const ReactLetterAvatar = ({
   size = 100,
   radius = 0,
   circle,
-  lang = "en-EN"
+  lang = "en-EN",
+  style = {},
 }) => {
   let firstLetter = name.trim()[0].toLocaleUpperCase(lang);
 
@@ -53,7 +54,7 @@ const ReactLetterAvatar = ({
     bgColor = [0, 0, 0];
   }
 
-  let style = {
+  let avatarStyle = {
     display: "flex",
     backgroundColor: `rgb(${bgColor})`,
     alignItems: "center",
@@ -63,11 +64,12 @@ const ReactLetterAvatar = ({
     borderRadius: circle ? size / 2 : radius,
     fontSize: Math.floor(size / 2),
     color: "rgba(233,233,233,0.9)",
-    alignItems: "center"
+    alignItems: "center",
+    ...style
   };
 
   return (
-    <div style={style}>
+    <div style={avatarStyle}>
       {firstLetter}
     </div>
   );

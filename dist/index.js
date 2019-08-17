@@ -8,6 +8,10 @@ var _defineProperty2 = require("babel-runtime/helpers/defineProperty");
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
+var _extends3 = require("babel-runtime/helpers/extends");
+
+var _extends4 = _interopRequireDefault(_extends3);
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
@@ -58,7 +62,9 @@ var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
       radius = _ref$radius === undefined ? 0 : _ref$radius,
       circle = _ref.circle,
       _ref$lang = _ref.lang,
-      lang = _ref$lang === undefined ? "en-EN" : _ref$lang;
+      lang = _ref$lang === undefined ? "en-EN" : _ref$lang,
+      _ref$style = _ref.style,
+      style = _ref$style === undefined ? {} : _ref$style;
 
   var firstLetter = name.trim()[0].toLocaleUpperCase(lang);
 
@@ -71,7 +77,7 @@ var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
     bgColor = [0, 0, 0];
   }
 
-  var style = (0, _defineProperty3.default)({
+  var avatarStyle = (0, _extends4.default)((0, _defineProperty3.default)({
     display: "flex",
     backgroundColor: "rgb(" + bgColor + ")",
     alignItems: "center",
@@ -81,11 +87,11 @@ var ReactLetterAvatar = function ReactLetterAvatar(_ref) {
     borderRadius: circle ? size / 2 : radius,
     fontSize: Math.floor(size / 2),
     color: "rgba(233,233,233,0.9)"
-  }, "alignItems", "center");
+  }, "alignItems", "center"), style);
 
   return _react2.default.createElement(
     "div",
-    { style: style },
+    { style: avatarStyle },
     firstLetter
   );
 };
